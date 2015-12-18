@@ -84,14 +84,14 @@ if __name__ == "__main__":
         names = []
         modenumber = 2
         node_name = str(sys.argv[1]).lower()
-        names.Append('TestReport')
+        names.append('TestReport')
         if node_name.find('master') != -1:
-            paths.Append('C:/Program Files (x86)/Jenkins/jobs/StagePresence-PR/workspace')
+            paths.append('C:/Program Files (x86)/Jenkins/jobs/StagePresence-PR/workspace')
         elif node_name.find('Macmini-Win10'.lower()) != -1:
-            names.Append('RunGUITestProject')
-            paths.Append('C:/workspace/StagePresence-PR')
-            paths.Append('C:/workspace/TestReport')
-            paths.Append('C:/workspace/Shared')        
+            names.append('RunGUITestProject')
+            paths.append('C:/workspace/StagePresence-PR')
+            paths.append('C:/workspace/TestReport')
+            paths.append('C:/workspace/Shared')        
             print "Content of path file is: " + str(paths)
             print "Content of name file is: " + str(names)
         results = delete_files_by_name_without_path_in_directors(modenumber, paths, names)       
